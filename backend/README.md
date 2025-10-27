@@ -43,7 +43,7 @@ Este projeto foi construído utilizando um stack moderno e robusto, separado em 
 -   **Deploy:** Vercel
 
 #### **Back-End**
--   **Linguagem:** Python 3
+-   **Linguagem:** Python 3.13.9
 -   **Framework:** Django & Django REST Framework
 -   **Banco de Dados:** PostgreSQL
 -   **Servidor WSGI:** Gunicorn
