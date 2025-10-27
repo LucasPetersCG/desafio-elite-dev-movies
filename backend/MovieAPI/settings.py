@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 from decouple import config
+import dj_database_url
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -78,14 +80,11 @@ WSGI_APPLICATION = 'MovieAPI.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'movie_list_db',
-        'USER': 'postgres',
-        'PASSWORD': '2105',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+    'default': dj_database_url.config(
+        # A variável 'DATABASE_URL' será lida do ambiente no Render.
+        # Se não encontrar, ele usará a URL do seu arquivo .env local.
+        default=config('DATABASE_URL')
+    )
 }
 
 
@@ -133,4 +132,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
+    "https://desafio-elite-dev-movies.vercel.app",
 ]
