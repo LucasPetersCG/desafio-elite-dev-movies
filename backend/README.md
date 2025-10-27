@@ -64,8 +64,8 @@ Siga os passos abaixo para configurar e rodar a aplicação em seu ambiente de d
 
 ```bash
 # 1. Clone o repositório
-git clone [LINK DO SEU REPOSITÓRIO NO GITHUB AQUI]
-cd nome-do-repositorio/backend-folder # Navegue para a pasta do backend
+git clone https://github.com/LucasPetersCG/desafio-elite-dev-movies
+cd desafio-elite-dev-movies/backend # Navegue para a pasta do backend
 
 # 2. Crie e ative um ambiente virtual
 python -m venv venv
@@ -99,7 +99,7 @@ python manage.py runserver
 
 ```bash
 # 1. Navegue para a pasta do frontend em um novo terminal
-cd ../frontend-folder # A partir da pasta do backend
+cd ../frontend # A partir da pasta do backend
 
 # 2. Instale as dependências
 npm install
