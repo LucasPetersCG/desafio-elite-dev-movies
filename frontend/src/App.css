@@ -1,0 +1,154 @@
+:root {
+  --background-color: #318aff;
+  --text-color: #ffffff;
+  --primary-color: #61dafb;
+  --card-background: #2e3f61;
+  --border-color: #85d1fd;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+#root {
+  width: 100%;
+  max-width: 1400px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  max-width: 600px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background-color: var(--card-background);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0 0 1rem 0;
+  color: var(--primary-color);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+main {
+  width: 100%;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+form {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 2rem auto;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-background);
+  color: var(--text-color);
+}
+
+button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--card-background);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #88ecff;
+}
+
+form button {
+  border-radius: 0 4px 4px 0;
+  margin-left: 0;
+}
+
+main > button {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 2rem auto;
+  border-radius: 4px;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.movie-card {
+  background-color: var(--card-background);
+  color: var(--text-color);
+  padding: 1rem;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.movie-card h3 {
+  font-size: 1.1rem;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.movie-card button {
+  width: 100%;
+  margin-left: 0;
+  border-radius: 4px;
+}

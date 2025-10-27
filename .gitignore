@@ -1,0 +1,23 @@
+# Arquivos de Ambiente Virtual e Dependências
+/backend/venv/
+/frontend/node_modules/
+
+# Arquivos de Sistema e de Editores
+.vscode/
+.idea/
+*.DS_Store
+Thumbs.db
+
+# Arquivos de Ambiente
+.env
+/backend/.env
+/frontend/.env
+
+# Arquivos de cache e logs do Python
+__pycache__/
+*.pyc
+*.log
+db.sqlite3
+
+# Arquivos de build do Vite
+/frontend/dist/
